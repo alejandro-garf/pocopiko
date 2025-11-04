@@ -25,7 +25,7 @@ function HomePage() {
         <div className="hero-content">
           <h1>Networking for the Latinx Community</h1>
           <p className="hero-subtitle">
-            Juntos si se peude!
+            For Our People By Our People
           </p>
           <div className="cta-buttons">
             <Link to="/register" className="btn btn-primary btn-large">
@@ -38,18 +38,51 @@ function HomePage() {
           </div>
         </div>
         
-        <div className="hero-stats">
-          <div className="stat">
-            <div className="stat-number">10K+</div>
-            <div className="stat-label">Active professionals</div>
-          </div>
-          <div className="stat">
-            <div className="stat-number">50K+</div>
-            <div className="stat-label">Connections made</div>
-          </div>
-          <div className="stat">
-            <div className="stat-number">100+</div>
-            <div className="stat-label">Companies</div>
+        <div className="flags-carousel">
+          <div className="flags-track">
+            {/* First set of flags */}
+            <div className="flag">🇲🇽</div>
+            <div className="flag">🇨🇴</div>
+            <div className="flag">🇦🇷</div>
+            <div className="flag">🇵🇪</div>
+            <div className="flag">🇻🇪</div>
+            <div className="flag">🇨🇱</div>
+            <div className="flag">🇪🇨</div>
+            <div className="flag">🇬🇹</div>
+            <div className="flag">🇨🇺</div>
+            <div className="flag">🇧🇴</div>
+            <div className="flag">🇩🇴</div>
+            <div className="flag">🇭🇳</div>
+            <div className="flag">🇵🇾</div>
+            <div className="flag">🇸🇻</div>
+            <div className="flag">🇳🇮</div>
+            <div className="flag">🇨🇷</div>
+            <div className="flag">🇵🇦</div>
+            <div className="flag">🇺🇾</div>
+            <div className="flag">🇵🇷</div>
+            <div className="flag">🇪🇸</div>
+            
+            {/* Duplicate set for seamless loop */}
+            <div className="flag">🇲🇽</div>
+            <div className="flag">🇨🇴</div>
+            <div className="flag">🇦🇷</div>
+            <div className="flag">🇵🇪</div>
+            <div className="flag">🇻🇪</div>
+            <div className="flag">🇨🇱</div>
+            <div className="flag">🇪🇨</div>
+            <div className="flag">🇬🇹</div>
+            <div className="flag">🇨🇺</div>
+            <div className="flag">🇧🇴</div>
+            <div className="flag">🇩🇴</div>
+            <div className="flag">🇭🇳</div>
+            <div className="flag">🇵🇾</div>
+            <div className="flag">🇸🇻</div>
+            <div className="flag">🇳🇮</div>
+            <div className="flag">🇨🇷</div>
+            <div className="flag">🇵🇦</div>
+            <div className="flag">🇺🇾</div>
+            <div className="flag">🇵🇷</div>
+            <div className="flag">🇪🇸</div>
           </div>
         </div>
       </div>
@@ -79,8 +112,8 @@ function HomePage() {
         <div className="footer-container">
           <div className="footer-content">
             <div className="footer-brand">
-              <h3>pikopoco</h3>
-              <p>Professional networking, for the latinx community by the latinx community.</p>
+              <h3>PocoPiko</h3>
+              <p>Professional Networking - For The Latinx Community By The Latinx Community</p>
             </div>
             
             <div className="footer-links">
@@ -119,7 +152,7 @@ function HomePage() {
           </div>
           
           <div className="footer-bottom">
-            <p>© 2024 Pikopoco. All rights reserved.</p>
+            <p>© 2025 PocoPiko. All rights reserved.</p>
             <div className="footer-social">
               <a href="#">Twitter</a>
               <a href="#">LinkedIn</a>
@@ -139,7 +172,7 @@ function LoginPage() {
       <Navbar />
       <div className="auth-container">
         <div className="auth-card">
-          <h2>Sign in to Pikopoco</h2>
+          <h2>Sign in to PocoPiko</h2>
           <form className="auth-form">
             <div className="form-group">
               <label>Email address</label>

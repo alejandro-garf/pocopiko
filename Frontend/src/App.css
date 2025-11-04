@@ -391,14 +391,20 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 24px;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 48px;
-  line-height: 1.5;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 400;
+  font-size: 41px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--white) 0%, var(--orange-light) 30%, var(--purple-light) 60%, var(--white) 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heroGradient 8s ease infinite;
+  filter: drop-shadow(0 0 60px rgba(255, 107, 53, 0.3));
+  padding: 0 20px;
 }
 
 .cta-buttons {
@@ -408,14 +414,11 @@ body {
   margin-bottom: 80px;
 }
 
-/* Stats with glowing effect */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-  max-width: 1200px;
+/* Flags */
+.flags-carousel {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 56px 64px;
+  padding: 56px 0;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(30px);
   border-radius: 28px;
@@ -427,72 +430,58 @@ body {
   overflow: hidden;
 }
 
-.hero-stats::before {
+.flags-carousel::before,
+.flags-carousel::after {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
+  width: 150px;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
-  animation: shine 3s ease-in-out infinite;
+  z-index: 2;
+  pointer-events: none;
 }
 
-@keyframes shine {
+.flags-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.9) 0%, transparent 100%);
+}
+
+.flags-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(15, 15, 15, 0.9) 0%, transparent 100%);
+}
+
+.flags-track {
+  display: flex;
+  gap: 40px;
+  animation: scrollFlags 40s linear infinite;
+  width: max-content;
+}
+
+@keyframes scrollFlags {
   0% {
-    left: -100%;
+    transform: translateX(0);
   }
-  50%, 100% {
-    left: 200%;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-.stat {
-  text-align: center;
-  position: relative;
-  padding: 24px;
-  transition: transform 0.4s ease;
+.flag {
+  font-size: 72px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.stat:hover {
-  transform: translateY(-12px) scale(1.05);
+.flag:hover {
+  transform: scale(1.3) translateY(-10px);
+  filter: drop-shadow(0 8px 24px rgba(255, 107, 53, 0.6));
 }
 
-.stat::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--orange), var(--purple));
-  transition: width 0.4s ease;
-  border-radius: 2px;
-}
-
-.stat:hover::after {
-  width: 80%;
-}
-
-.stat-number {
-  font-size: 68px;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--orange), var(--purple-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 12px;
-  line-height: 1;
-  filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.5));
-}
-
-.stat-label {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
+/* Pause animation on hover */
+.flags-carousel:hover .flags-track {
+  animation-play-state: paused;
 }
 
 /* Features Section - dark and artistic */
