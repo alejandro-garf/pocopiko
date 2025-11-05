@@ -37,6 +37,7 @@ function HomePage() {
             <Link to="/login" className="btn btn-secondary btn-large">Sign in</Link>
           </div>
         </div>
+        </div>
         
         <div className="flags-carousel">
           <div className="flags-track">
@@ -85,7 +86,7 @@ function HomePage() {
             <div className="flag">🇪🇸</div>
           </div>
         </div>
-      </div>
+     
 
       <div className="features">
         <h2>Everything you need to network</h2>
