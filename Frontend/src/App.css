@@ -345,7 +345,8 @@ body {
   transform: translateY(-3px) scale(1.02);
 }
 
-/* Hero Section - compact and artistic */
+/* Hero Section */
+/* Hero Section */
 .hero {
   max-width: 1600px;
   margin: 0 auto;
@@ -355,12 +356,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-content {
   text-align: center;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   transform-style: preserve-3d;
 }
 
@@ -378,7 +381,6 @@ body {
   background-clip: text;
   animation: heroGradient 8s ease infinite;
   filter: drop-shadow(0 0 60px rgba(255, 107, 53, 0.3));
-  padding: 0 20px;
 }
 
 @keyframes heroGradient {
@@ -404,7 +406,6 @@ body {
   background-clip: text;
   animation: heroGradient 8s ease infinite;
   filter: drop-shadow(0 0 60px rgba(255, 107, 53, 0.3));
-  padding: 0 20px;
 }
 
 .cta-buttons {
@@ -588,12 +589,13 @@ body {
 
 /* Auth Pages */
 .auth-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 60px 48px;
-  position: relative;
+  margin: 0 auto;
 }
 
 .auth-card {
@@ -602,8 +604,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 28px;
   padding: 64px;
-  width: 100%;
-  max-width: 560px;
+  width: 560px;
+  max-width: calc(100vw - 96px);
   box-shadow: 
     0 32px 100px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -842,13 +844,7 @@ body {
   }
 
   .hero-subtitle {
-    font-size: 19px;
-  }
-
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 40px 32px;
+    font-size: 28px;
   }
 
   .features h2 {
@@ -895,4 +891,18 @@ body {
     gap: 24px;
     text-align: center;
   }
+}
+
+.auth-page .auth-container {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 60px 48px;
+}
+
+.homepage .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

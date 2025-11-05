@@ -19,7 +19,7 @@ function Navbar() {
 // Homepage Component
 function HomePage() {
   return (
-    <div className="page">
+    <div className="page homepage">
       <Navbar />
       <div className="hero">
         <div className="hero-content">
@@ -168,7 +168,7 @@ function HomePage() {
 // Login Page
 function LoginPage() {
   return (
-    <div className="page">
+    <div className="page auth-page">
       <Navbar />
       <div className="auth-container">
         <div className="auth-card">
@@ -196,7 +196,7 @@ function LoginPage() {
 // Register Page
 function RegisterPage() {
   return (
-    <div className="page">
+    <div className="page auth-page">
       <Navbar />
       <div className="auth-container">
         <div className="auth-card">
