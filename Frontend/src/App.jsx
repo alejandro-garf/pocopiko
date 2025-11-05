@@ -128,7 +128,7 @@ function HomePage() {
               
               <div className="footer-column">
                 <h4>Company</h4>
-                <a href="#">About</a>
+                <a href="#">About</a>c
                 <a href="#">Careers</a>
                 <a href="#">Blog</a>
                 <a href="#">Press</a>

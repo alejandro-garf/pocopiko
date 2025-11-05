@@ -1,16 +1,83 @@
-# React + Vite
+# Phase 1: Post-Authentication Layout & Navigation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1.1 Main App Shell
 
-Currently, two official plugins are available:
+### Authenticated Layout Component
+- [ ] Create `AuthenticatedLayout.jsx` component
+- [ ] Implement wrapper structure (header, left sidebar, main content, right sidebar)
+- [ ] Add responsive grid/flexbox layout
+- [ ] Set up proper spacing and padding
+- [ ] Add background styling consistent with landing page theme
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Top Navigation Bar
+- [ ] Create `TopNav.jsx` component
+- [ ] Add PocoPiko logo (left side)
+- [ ] Add search bar (center)
+  - [ ] Search icon
+  - [ ] Input field with placeholder
+  - [ ] Dropdown for search results (UI only for now)
+- [ ] Add navigation icons (right side)
+  - [ ] Home icon
+  - [ ] My Network/Bros icon
+  - [ ] Messaging icon
+  - [ ] Notifications icon
+  - [ ] Profile dropdown icon
+- [ ] Style with orange/purple gradient theme
+- [ ] Add hover effects on icons
+- [ ] Make responsive (collapse to hamburger on mobile)
 
-## React Compiler
+### Left Sidebar
+- [ ] Create `LeftSidebar.jsx` component
+- [ ] Add profile quick view card
+  - [ ] Profile picture placeholder
+  - [ ] User name
+  - [ ] User title/headline
+  - [ ] "Bros" count
+  - [ ] Profile views count (optional)
+- [ ] Add navigation menu
+  - [ ] Home/Feed link
+  - [ ] Profile link
+  - [ ] Bros/Network link
+  - [ ] Messaging link
+  - [ ] Notifications link
+- [ ] Style links with icons
+- [ ] Add active state styling
+- [ ] Make sticky on scroll
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Right Sidebar
+- [ ] Create `RightSidebar.jsx` component
+- [ ] Add "Bros you may know" section
+  - [ ] Section title
+  - [ ] User card list (3-5 users)
+  - [ ] Each card: photo, name, title, "Add Bro" button
+- [ ] Add "Trending" or "Featured" section (optional)
+- [ ] Style with card backgrounds (glass morphism effect)
+- [ ] Make sticky on scroll
 
-## Expanding the ESLint configuration
+### Protected Routes
+- [ ] Create `ProtectedRoute.jsx` wrapper component
+- [ ] Check authentication state (mock for now)
+- [ ] Redirect to `/login` if not authenticated
+- [ ] Redirect to `/feed` if authenticated and on landing page
+- [ ] Wrap authenticated routes in React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Logout Functionality
+- [ ] Add logout button to profile dropdown in TopNav
+- [ ] Create logout handler function (clear mock auth state)
+- [ ] Redirect to landing page on logout
+- [ ] Add confirmation modal (optional)
+
+### Routing Setup
+- [ ] Update `App.jsx` with authenticated routes
+- [ ] Add route for `/feed` (placeholder for now)
+- [ ] Add route for `/profile` (placeholder for now)
+- [ ] Add route for `/profile/:userId` for viewing others
+- [ ] Test navigation between routes
+
+### Testing & Polish
+- [ ] Test layout on different screen sizes
+- [ ] Verify navigation works between all pages
+- [ ] Check that sidebar stays sticky
+- [ ] Ensure consistent spacing and alignment
+- [ ] Test logout redirects correctly
+- [ ] Verify protected routes work as expected
