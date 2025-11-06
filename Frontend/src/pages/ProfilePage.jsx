@@ -6,6 +6,7 @@ import ProfessionalBio from '../components/profile/ProfessionalBio';
 import ExperienceSection from '../components/profile/ExperienceSection';
 import EducationSection from '../components/profile/EducationSection';
 import CertificationsSection from '../components/profile/CertificationsSection';
+import ProjectsSection from '../components/profile/ProjectsSection';
 
 function ProfilePage() {
   // Mock user data
@@ -142,11 +143,7 @@ function ProfilePage() {
             isEditMode={isEditMode}
           />
 
-          {/* Placeholder for next sections */}
-          <div className="profile-section">
-            <h3>Projects</h3>
-            <p>Projects coming next...</p>
-          </div>
+          <ProjectsSection />
         </div>
       </div>
     </div>
