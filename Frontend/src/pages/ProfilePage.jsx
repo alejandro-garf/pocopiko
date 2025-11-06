@@ -4,6 +4,7 @@ import ProfileHeader from '../components/profile/ProfileHeader';
 import HumanBio from '../components/profile/HumanBio';
 import ProfessionalBio from '../components/profile/ProfessionalBio';
 import ExperienceSection from '../components/profile/ExperienceSection';
+import EducationSection from '../components/profile/EducationSection';
 
 function ProfilePage() {
   // Mock user data - will come from backend/props later
@@ -50,6 +51,19 @@ function ProfilePage() {
         location: 'Remote',
         description: 'Built and maintained React applications. Collaborated with cross-functional teams to deliver features on time. Improved app performance by 40%.',
         logo: null
+      }
+    ],
+    educations: [
+      {
+        id: 1,
+        school: 'Stanford University',
+        degree: "Bachelor's Degree",
+        fieldOfStudy: 'Computer Science',
+        startDate: '2016-09',
+        endDate: '2020-06',
+        grade: '3.8 GPA',
+        activities: 'Computer Science Club, Hackathon Organizer',
+        logo: 'https://via.placeholder.com/48'
       }
     ]
   });
@@ -108,10 +122,15 @@ function ProfilePage() {
             isEditMode={isEditMode}
           />
 
+          <EducationSection 
+            userData={userData}
+            isEditMode={isEditMode}
+          />
+
           {/* Placeholder sections for next steps */}
           <div className="profile-section">
-            <h3>Education</h3>
-            <p>Education history coming next...</p>
+            <h3>Certifications</h3>
+            <p>Certifications coming next...</p>
           </div>
         </div>
       </div>
