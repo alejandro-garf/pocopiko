@@ -5,9 +5,10 @@ import HumanBio from '../components/profile/HumanBio';
 import ProfessionalBio from '../components/profile/ProfessionalBio';
 import ExperienceSection from '../components/profile/ExperienceSection';
 import EducationSection from '../components/profile/EducationSection';
+import CertificationsSection from '../components/profile/CertificationsSection';
 
 function ProfilePage() {
-  // Mock user data - will come from backend/props later
+  // Mock user data
   const [userData] = useState({
     name: 'John Doe',
     title: 'Software Engineer | Building the Future',
@@ -39,18 +40,8 @@ function ProfilePage() {
         startDate: '2022-01',
         endDate: 'Present',
         location: 'San Francisco, CA',
-        description: 'Leading the development of scalable web applications. Mentoring junior developers and driving technical decisions for the team. Successfully delivered 5+ major features impacting 1M+ users.',
+        description: 'Leading the development of scalable web applications. Mentoring junior developers and driving technical decisions for the team.',
         logo: 'https://via.placeholder.com/48'
-      },
-      {
-        id: 2,
-        company: 'StartupXYZ',
-        title: 'Software Engineer',
-        startDate: '2020-06',
-        endDate: '2021-12',
-        location: 'Remote',
-        description: 'Built and maintained React applications. Collaborated with cross-functional teams to deliver features on time. Improved app performance by 40%.',
-        logo: null
       }
     ],
     educations: [
@@ -65,6 +56,28 @@ function ProfilePage() {
         activities: 'Computer Science Club, Hackathon Organizer',
         logo: 'https://via.placeholder.com/48'
       }
+    ],
+    certifications: [
+      {
+        id: 1,
+        name: 'AWS Certified Solutions Architect',
+        organization: 'Amazon Web Services',
+        issueDate: '2023-03',
+        expirationDate: '2026-03',
+        credentialId: 'AWS-1234567',
+        credentialUrl: 'https://aws.amazon.com/verification',
+        noExpiration: false
+      },
+      {
+        id: 2,
+        name: 'Professional Scrum Master I',
+        organization: 'Scrum.org',
+        issueDate: '2022-06',
+        expirationDate: null,
+        credentialId: 'PSM-9876543',
+        credentialUrl: 'https://scrum.org/verify',
+        noExpiration: true
+      }
     ]
   });
 
@@ -72,7 +85,6 @@ function ProfilePage() {
 
   return (
     <div className="profile-page-wrapper">
-      {/* Simple Top Navigation */}
       <nav className="profile-top-nav">
         <div className="profile-nav-container">
           <Link to="/feed" className="profile-nav-logo">
@@ -97,7 +109,6 @@ function ProfilePage() {
         </div>
       </nav>
 
-      {/* Profile Content */}
       <div className="profile-page-content">
         <ProfileHeader 
           userData={userData}
@@ -105,7 +116,6 @@ function ProfilePage() {
           onEditToggle={() => setIsEditMode(!isEditMode)}
         />
 
-        {/* Profile Sections */}
         <div className="profile-sections">
           <HumanBio 
             userData={userData}
@@ -127,10 +137,15 @@ function ProfilePage() {
             isEditMode={isEditMode}
           />
 
-          {/* Placeholder sections for next steps */}
+          <CertificationsSection 
+            userData={userData}
+            isEditMode={isEditMode}
+          />
+
+          {/* Placeholder for next sections */}
           <div className="profile-section">
-            <h3>Certifications</h3>
-            <p>Certifications coming next...</p>
+            <h3>Projects</h3>
+            <p>Projects coming next...</p>
           </div>
         </div>
       </div>
