@@ -7,6 +7,10 @@ import ExperienceSection from '../components/profile/ExperienceSection';
 import EducationSection from '../components/profile/EducationSection';
 import CertificationsSection from '../components/profile/CertificationsSection';
 import ProjectsSection from '../components/profile/ProjectsSection';
+import VolunteerSection from '../components/profile/VolunteerSection';
+import UserPostsSection from '../components/profile/UserPostsSection';
+import ActivitySection from '../components/profile/ActivitySection';
+import FriendsListSection from '../components/profile/FriendsListSection';
 
 function ProfilePage() {
   // Mock user data
@@ -79,7 +83,8 @@ function ProfilePage() {
         credentialUrl: 'https://scrum.org/verify',
         noExpiration: true
       }
-    ]
+    ],
+    volunteers: []
   });
 
   const [isEditMode, setIsEditMode] = useState(false);
@@ -144,6 +149,17 @@ function ProfilePage() {
           />
 
           <ProjectsSection />
+
+          <VolunteerSection 
+            userData={userData}
+            isEditMode={isEditMode}
+          />
+
+          <UserPostsSection />
+
+          <ActivitySection />
+
+          <FriendsListSection />
         </div>
       </div>
     </div>
